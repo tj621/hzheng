@@ -1,0 +1,4 @@
+天气api返回数据说明
+	http://www.heweather.com/documents/api
+
+主要关注两个：fl表示体感温度，tmp表示温度
