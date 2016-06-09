@@ -1,0 +1,43 @@
+
+//node_0的作用主要是为了在解析的时候，需要查找结点的时候，数组查询下标和实际传感器节点编号一致
+
+湿度需要确定是相对湿度还是绝对湿度
+
+相对湿度：relative_humidity
+
+绝对湿度：absolute_humidity
+
+{
+    "indoor": {
+	    ["node_0":{
+	        "temperature": "0",
+                "relative_humidity": "0",
+                "radiation": "0",
+                "co2": "0"}],   
+            ["node_1":{
+                "temperature": "20.0",
+                "relative_humidity": "80.0",
+                "radiation": "20000",
+                "co2": "500"}],
+            ["node_2":{
+                "temperature": "20.0",
+                "relative_humidity": "80.0",
+                "radiation": "20000",
+                "co2": "500"}],
+	    ["node_3":{
+                "temperature": "20.0",
+                "humidity": "80.0",
+                "radiation": "20000",
+                "co2": "500"}],
+	    ["node_4":{
+                "temperature": "20.0",
+                "humidity": "80.0",
+                "radiation": "20000",
+                "co2": "500"}],
+	    ["node_5":{
+                "temperature": "20.0",
+                "humidity": "80.0",
+                "radiation": "20000",
+                "co2": "500"}]
+         }
+}

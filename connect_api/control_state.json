@@ -1,0 +1,44 @@
+{
+    "control":
+	   {
+	    "roof_vent": "on",
+            "side_vent": "on",
+            "shade_screen_out": "on",
+            "shade_screen_in": "on",
+            "thermal_screen": "on",
+	    "water_pad":"on"
+	    "water_pump":"on"
+	    "fog":"on"
+	    "heating": "on"
+	    "co2":"on"
+	    "lighting_1": "on",
+            "lighting_2": "off"
+	    "irrigation":"on"
+           },
+
+    "actuator": 
+         {
+	   "tril_state"
+            {
+	    "roof_vent": "on",
+            "side_ven": "on",
+            "shade_screen_out": "on",
+            "shade_screen_in": "on",
+            "thermal_screen": "on",
+    	    },
+	 "double_state"
+	  {
+	    "water_pad":"on"
+	    "water_pump":"on"
+	    "fogging":"on"
+	    "heating": "on"
+	    "co2":"on"
+	    "lighting_1": "on",
+            "lighting_2": "off"
+	    "irrigation":"on"
+	    }
+        }
+}
+
+on off stop
+on off 
