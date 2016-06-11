@@ -1,43 +1,25 @@
+æ¹¿åº¦é»˜è®¤è®¡é‡æ–¹å¼ä¸ºç›¸å¯¹æ¹¿åº¦
+å…‰ç…§é»˜è®¤å•ä½ä¸ºç…§åº¦
+äºŒæ°§åŒ–ç¢³å•ä½ä¸ºppm
 
-//node_0µÄ×÷ÓÃÖ÷ÒªÊÇÎªÁËÔÚ½âÎöµÄÊ±ºò£¬ĞèÒª²éÕÒ½áµãµÄÊ±ºò£¬Êı×é²éÑ¯ÏÂ±êºÍÊµ¼Ê´«¸ĞÆ÷½Úµã±àºÅÒ»ÖÂ
 
-Êª¶ÈĞèÒªÈ·¶¨ÊÇÏà¶ÔÊª¶È»¹ÊÇ¾ø¶ÔÊª¶È
-
-Ïà¶ÔÊª¶È£ºrelative_humidity
-
-¾ø¶ÔÊª¶È£ºabsolute_humidity
-
+PATH:/indoor
+response:
 {
     "indoor": {
-	    ["node_0":{
-	        "temperature": "0",
-                "relative_humidity": "0",
-                "radiation": "0",
-                "co2": "0"}],   
-            ["node_1":{
-                "temperature": "20.0",
-                "relative_humidity": "80.0",
-                "radiation": "20000",
-                "co2": "500"}],
-            ["node_2":{
-                "temperature": "20.0",
-                "relative_humidity": "80.0",
-                "radiation": "20000",
-                "co2": "500"}],
-	    ["node_3":{
-                "temperature": "20.0",
-                "humidity": "80.0",
-                "radiation": "20000",
-                "co2": "500"}],
-	    ["node_4":{
-                "temperature": "20.0",
-                "humidity": "80.0",
-                "radiation": "20000",
-                "co2": "500"}],
-	    ["node_5":{
-                "temperature": "20.0",
-                "humidity": "80.0",
-                "radiation": "20000",
-                "co2": "500"}]
-         }
+        "node_0": {
+            "updatetime": "201605010800",
+            "temperature": "20.0",
+            "relative_humidity": "70.0",
+            "radiation": "20000",
+            "co2": "400"
+        },
+        "node_1": {
+            "updatetime": "201605010800",
+            "temperature": "20.0",
+            "relative_humidity": "80.0",
+            "radiation": "20000",
+            "co2": "500"
+        }
+    }
 }

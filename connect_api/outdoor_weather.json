@@ -1,17 +1,18 @@
-    {
-        "outdoor": {
-	    "updateTime":"2016/01/01 22:11"
-            "temperature": "20.0",
-            "relative_humidity": "80.0",
-            "radiation": "20000",
-            "co2": "500",
-            "wind_direction": "WN",
-            "wind_speed": "7.0",
-            "rain_snow": "true",
-            "atmosphere": "101325"
-        }
+PATH: /outdoor
+METHOD: GET
+response: {
+    "outdoor": {
+        "updatetime": "201605010800",
+        "temperature": "20.0",
+        "relative_humidity": "80.0",
+        "radiation": "20000",
+        "co2": "500",
+        "wind_direction": "NW",
+        "wind_speed": "7.0",
+        "rain_snow": "true",
+        "atmosphere": "101325"
     }
-//同样也是湿度类型的问题
-风速说明：WN:west north
+}
 
+椋庡悜NW: northwest
 East, South, West, North
