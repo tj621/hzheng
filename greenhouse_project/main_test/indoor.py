@@ -44,5 +44,15 @@ class Indoor(object):
     def get_co2(self):
         return self.co2
     def classToJson(self,a):
-        return '''{"indoor": {"%s": {"updatetime": "%s","temperature": "%s","relative_humidity": "%s","radiation": "%s","co2": "%s"}}}''' \
+        return '''
+        {"indoor":{
+            "%s": {
+                "updatetime":"%s",
+                "temperature":"%s",
+                "relative_humidity":"%s",
+                "radiation": "%s",
+                "co2": "%s"
+                  }
+            }
+        }''' \
            % (a,self.updateTime, self.temperature, self.humidity, self.radiation, self.co2)
