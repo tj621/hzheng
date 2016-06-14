@@ -18,7 +18,7 @@ class Control_state:
     shade_screen_in="off";
     thermal_screen="off"
     
-    cooling_pump="off"
+    cooling_pad="off"
     fogging="off"
     hearting="on"
     co2="off"
@@ -32,14 +32,14 @@ class Control_state:
     def set_updateTime(self):
         self.updateTime=time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
     
-    def set_Control_state(self, roof_vent_south, roof_vent_north, side_vent, shade_screen_out, shade_screen_in, thermal_screen, cooling_pump, fogging, hearting, co2, lighting_1, lighting_2, irrigation):
+    def set_Control_state(self, roof_vent_south, roof_vent_north, side_vent, shade_screen_out, shade_screen_in, thermal_screen, cooling_pad, fogging, hearting, co2, lighting_1, lighting_2, irrigation):
         self.roof_vent_south = roof_vent_south
         self.roof_vent_north = roof_vent_north
         self.side_vent = side_vent
         self.shade_screen_out = shade_screen_out
         self.shade_screen_in = shade_screen_in
         self.thermal_screen = thermal_screen
-        self.cooling_pump = cooling_pump
+        self.cooling_pad = cooling_pad
         self.fogging = fogging
         self.hearting = hearting
         self.co2 = co2
@@ -72,8 +72,8 @@ class Control_state:
         return self.thermal_screen
 
 
-    def get_cooling_pump(self):
-        return self.cooling_pump
+    def get_cooling_pad(self):
+        return self.cooling_pad
 
 
     def get_fogging(self):
@@ -124,8 +124,8 @@ class Control_state:
         self.thermal_screen = value
 
 
-    def set_cooling_pump(self, value):
-        self.cooling_pump = value
+    def set_cooling_pad(self, value):
+        self.cooling_pad = value
 
 
     def set_fogging(self, value):
@@ -165,7 +165,7 @@ class Control_state:
                 "thermal_screen": "%s",
                            },
             "bi_state": {
-                "cooling_pump": "%s",
+                "cooling_pad": "%s",
                 "fogging": "%s",
                 "heating": "%s",
                 "co2": "%s",
@@ -176,10 +176,11 @@ class Control_state:
                     }
         }'''   \
         % (self.updateTime,self.roof_vent_south,self.roof_vent_south,self.side_vent,self.shade_screen_out,self.shade_screen_in,
-           self.thermal_screen,self.cooling_pump,self.fogging,self.hearting,self.co2,self.lighting_1,self.lighting_2,self.irrigation)
-     
-a=Control_state()
-print(a.get_co_2())     
-print(a.clssToJson())
+           self.thermal_screen,self.cooling_pad,self.fogging,self.hearting,self.co2,self.lighting_1,self.lighting_2,self.irrigation)
+
+# test     
+# a=Control_state()
+# print(a.get_co_2())     
+# print(a.clssToJson())
      
     
