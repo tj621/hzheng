@@ -41,6 +41,8 @@ def get_db():
 def close_db():
     if hasattr(g, 'sqlite_db'):
         g.sqlite_db.close()    
+
+
     
 #test
 # init_db()

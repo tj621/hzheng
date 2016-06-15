@@ -26,6 +26,11 @@ class Control_state:
     lighting_2="off"
     irrigation="off"
     
+    tril_control=("roof_vent_south",'roof_vent_north','side_vent','shade_screen_out','shade_screen_in','thermal_screen')
+    bi_control=('cooling_pad','fogging','hearting','co2','lighting_1','lighting_2','irrigation')
+    tril_state=("on","off","stop")
+    bi_state=("on","off")
+    
     def __init__(self):
         self.updateTime=time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
     

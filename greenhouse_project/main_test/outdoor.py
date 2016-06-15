@@ -6,10 +6,11 @@ Created on 2016年6月12日
 from builtins import classmethod
 from pip._vendor.requests.models import json
 import urllib
+import time
 
 
 class Outdoor(object):
-    update_time="2016/06/01"
+    updateTime="2016/06/01"
     temperature='0'
     humidity='80'
     radiation='123'
@@ -19,70 +20,76 @@ class Outdoor(object):
     rain="true"
     atmosphere='1111'
     @classmethod
-    def setDailyWeather(cls,update_time1,temperature1,humidity1,radiation1,co21,wind_direction1,wind_speed1,rain1,atmosphere1):
-        cls.update_time=update_time1;
-        cls.temperature=temperature1
-        cls.humidity=humidity1
-        cls.radiation=radiation1;
-        cls.co2=co21
-        cls.wind_direction=wind_direction1
-        cls.wind_speed=wind_speed1
-        cls.rain=rain1
-        cls.atmosphere=atmosphere1
+    def __init__(self):
+        self.update_time=time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
+        
+    def setDailyWeather(self,update_time1,temperature1,humidity1,radiation1,co21,wind_direction1,wind_speed1,rain1,atmosphere1):
+        self.update_time=update_time1;
+        self.temperature=temperature1
+        self.humidity=humidity1
+        self.radiation=radiation1;
+        self.co2=co21
+        self.wind_direction=wind_direction1
+        self.wind_speed=wind_speed1
+        self.rain=rain1
+        self.atmosphere=atmosphere1
+        
+    def set_updateTime(self):
+        self.updateTime=time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
     @classmethod    
-    def getupdate_time(cls):
-        return cls.update_time
+    def getupdate_time(self):
+        return self.update_time
     @classmethod
-    def getTemperature(cls):
-        return cls.temperature
+    def getTemperature(self):
+        return self.temperature
     @classmethod
-    def gethumidity(cls):
-        return cls.humidity
+    def gethumidity(self):
+        return self.humidity
     @classmethod
-    def getradiation(cls):
-        return cls.radiation
+    def getradiation(self):
+        return self.radiation
     @classmethod
-    def getCo2(cls):
-        return cls.co2
+    def getCo2(self):
+        return self.co2
     @classmethod
-    def getwind_direction(cls):
-        return cls.wind_direction
+    def getwind_direction(self):
+        return self.wind_direction
     @classmethod
-    def getWind_speed(cls):
-        return cls.wind_speed
+    def getWind_speed(self):
+        return self.wind_speed
     @classmethod
-    def getRain(cls):
-        return cls.rain
+    def getRain(self):
+        return self.rain
     @classmethod
-    def getatmosphere(cls):
-        return cls.atmosphere
+    def getatmosphere(self):
+        return self.atmosphere
     @classmethod
-    def setupdate_time(cls,update_time):
-        cls.update_time=update_time;
+    def setupdate_time(self,update_time):
+        self.update_time=update_time;
     @classmethod
-    def sethumidity(cls,humidity):
-        cls.humidity=humidity;
+    def sethumidity(self,humidity):
+        self.humidity=humidity;
     @classmethod
-    def setradiation(cls,radiation):
-        cls.radiation=radiation;
+    def setradiation(self,radiation):
+        self.radiation=radiation;
     @classmethod
-    def setco2(cls,co2):
-        cls.co2=co2;
+    def setco2(self,co2):
+        self.co2=co2;
     @classmethod
-    def setwind_direction(cls,wind_direction):
-        cls.wind_direction=wind_direction;
+    def setwind_direction(self,wind_direction):
+        self.wind_direction=wind_direction;
     @classmethod
-    def setwind_speed(cls,wind_speed):
-        cls.wind_speed=wind_speed;
+    def setwind_speed(self,wind_speed):
+        self.wind_speed=wind_speed;
     @classmethod
-    def setrain(cls,rain):
-        cls.rain=rain;
+    def setrain(self,rain):
+        self.rain=rain;
     @classmethod
-    def setatmosphere(cls,atmosphere):
-        cls.atmosphere=atmosphere;  
+    def setatmosphere(self,atmosphere):
+        self.atmosphere=atmosphere;  
     @classmethod
-    def settemperature(cls,value):
-        cls.temperature=value;   
+    def settemperature(self,value):
+        self.temperature=value;   
     @classmethod
     def classtoJson(self):
         return '''

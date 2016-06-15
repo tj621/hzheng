@@ -16,7 +16,6 @@ class Indoor(object):
         self.humidity = humidity
         self.radiation = radiation
         self.co2 = co2
-
     def set_updateTime(self):
         self.updateTime=time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
         

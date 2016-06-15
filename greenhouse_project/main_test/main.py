@@ -1,11 +1,12 @@
-from flask import Flask
+from flask import Flask,request
  
 from main_test.indoor import Indoor
 from main_test.outdoor import Outdoor
 from main_test.scheduler import Scheduler
-from flask.globals import request
 from main_test.control_state import Control_state
 from main_test.database import init_db, get_db, close_db
+import json
+
 
 app = Flask(__name__)
 node0 =Indoor()
@@ -61,17 +62,45 @@ def index():
 
 @app.route('/indoor')
 def response_indoor():
+    node0.set_updateTime()
     return node0.classToJson('node0')
 
 @app.route('/outdoor')
 def response_outdoor():
+    outdoor.getupdate_time()
     return outdoor.classtoJson()
 
 
-@app.route('/control',methods=['GET', 'POST'])
+@app.route('/control',methods=['GET','POST'])
 def response_control_state():
-    if request.methods =='POST':
-        return request.json()
+    control.set_updateTime()
+    if request.method =='POST':
+        data=request.data.decode()
+        print(data)
+        dataObj=json.loads(data)
+        keys=dataObj.keys()
+        response="{"
+        response+='''"updateTime":"%s",''' % (control.updateTime)
+        for key in keys:
+            value=dataObj.get(key)
+            if key in Control_state.tril_control:
+                if value in Control_state.tril_state:
+                    setattr(control,key, value)
+                    print(key,getattr(control,key))
+                    response+='''"%s":"%s",''' %(key,value)
+                else:
+                    print("command wrong")
+                    return "command wrong"
+            if key in Control_state.bi_control:
+                if value in Control_state.bi_state:
+                    setattr(control,key,value)
+                    print(key,getattr(control,key))
+                    response+='''"%s":"%s",''' %(key,value)
+                else:
+                    print("command wrong")
+                    return "command wrong"     
+        response+="}"
+        return response
     else:
         return control.clssToJson()
 
@@ -82,9 +111,9 @@ def change():
 
 if __name__ == '__main__':
     init_db()
-    scheduler1 = Scheduler(2, get_outdoor)
-    scheduler2 = Scheduler(3, get_indoor)
-    scheduler1.start()
-    scheduler2.start()
+#     scheduler1 = Scheduler(2, get_outdoor)
+#     scheduler2 = Scheduler(3, get_indoor)
+#     scheduler1.start()
+#     scheduler2.start()
     app.run('0.0.0.0', '8020')
     close_db()
