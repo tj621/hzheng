@@ -1,6 +1,6 @@
 parameter={
            "plant_parameter_setting":{
-                                "time1":"",
+                                "time1":"", 
                                 "temperature1":"",
                                 "time2":"",
                                 "temperature2":"",
@@ -18,31 +18,31 @@ parameter={
                           "cooling_stop_temperature":""
                           },
            "roof_vent_parameter_setting":{
-                                "expect_humidity":"",   // ywang
-                                "humidity_influence_range_of_air_temperature":"", //ywang
-                                "low_humidity_influence_on_air_temperature":"",//ywang
-                                "high_humidity_influence_on_air_temperature":"",//ywang
+                                "expect_humidity":"",  
+                                "humidity_influence_range_of_air_temperature":"", 
+                                "low_humidity_influence_on_air_temperature":"",
+                                "high_humidity_influence_on_air_temperature":"",
                                 "expect_light":"",
-                                "light_influence_on_air_temperature_slope":"",//ywang
-                                "high_light_influence_on_temperature":"",//hzheng
-								"low_light_influence_on_temperature":"",//hzheng
+                                "light_influence_on_air_temperature_slope":"",
+                                "high_light_influence_on_temperature":"",
+								"low_light_influence_on_temperature":"",
                                 "frost_temperature":"",
                                 "indoor_temperature_lower_limit":"",
                                 "roof_vent_wind_speed_upper_limit":"",
                                 "roof_vent_rain_upper_limit":""
                                           },
            "heating_parameter_setting":{
-                                "heating_start_lowest_temperature":"",//ywang
-                                "heating_stop_highest_temperature":""//ywang
+                                "heating_start_lowest_temperature":"",
+                                "heating_stop_highest_temperature":""
                                         },
            "thermal_screen_parameter_setting":{
-                                        "month_to_open_thermal_screen":"",//hzheng
-                                        "month_to_close_thermal_screen":"",//hzheng
-                                        "time_to_open_thermal_screen":"",//hzheng
-                                        "time_to_close_thermal_screen":""//hzheng
+                                        "month_to_open_thermal_screen":"",
+                                        "month_to_close_thermal_screen":"",
+                                        "time_to_open_thermal_screen":"",
+                                        "time_to_close_thermal_screen":""
                                                },
            "side_vent_parameter_setting":{
-                                    "temperature_to_open_side":"",//hzheng
+                                    "temperature_to_open_side":"",
                                     "wait_time_to_open_side":"",
                                     "rain_upper_limit_to_close":""
                                           },
@@ -54,20 +54,21 @@ parameter={
                              "temperature_to_open_fogging":"",
                              "temperature_to_open_cooling_pad":""
                                       },
-			"lighting_setting":{                                //hzheng
-                                "month_to_open_lighting":"",    
-                                "month_to_close_lighting":"",
-					            "time_to_close_lighting":"",
-					            "time_to_close_lihting":"",
-                                "radiation_to_open_lighting":"",
-                                "radiation_to_close_lihting":""
-                                },
-			 "colse_to_open_need_time":{
-								"roof_vent_open_time":""
-								"side_vent_time":""
-								"shade_screen_out_time":""
-								"shade_screen_in_time":""
-								"therm_screen":""
-
+			"lighting_setting":{
+							"month_to_open_lighting":"",
+							"month_to_close_lighting":"",
+							"period1_start_lighting":"",
+							"period1_stop_lighting":"",
+							"period2_start_lighting":"",
+							"period2_stop_lighting":"",
+							"radiation1_to_open_lighting":"",
+							"radiation2_to_open_lighting":""
+								},
+			 "time_that_full_open_to_full_close":{
+								"roof_vent_open_time":"",
+								"side_vent_open_time":"",
+								"shade_screen_out_open_time":"",
+								"shade_screen_in_open_time":"",
+								"thermal_screen_open_time":""
 							 }
            }        
